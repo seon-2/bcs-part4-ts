@@ -1,19 +1,11 @@
 // 제네릭
+// 타입을 정의하지 않고 있다가 실행할 때 정해준다!
+// 에러 체크도 가능
 
-// function someFunction(a: number): number {
-//   return a;
-// }
-
-// 타입만 바꿔야 할 경우
-function someNumberFunction(a: number): number {
+function someFunction<T>(a: T): T {
   return a;
 }
 
-function someStringFunction(a: string): string {
-  return a;
-}
-
-someNumberFunction(1);
-
-someStringFunction("a");
-// 재사용성 떨어짐
+someFunction<number>(1);
+// someFunction<string>(1); // 에러 체크
+someFunction<string>("a");
