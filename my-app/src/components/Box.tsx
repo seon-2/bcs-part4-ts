@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-interface BoxProps {
+export interface BoxProps {
   color: string;
   width: number;
   height: number;
