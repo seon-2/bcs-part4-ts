@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 
 // enum으로 한 번 선언해 놓으면 오타 줄일 수 있음
 export enum Color {
@@ -15,14 +15,22 @@ export interface BoxProps {
 }
 
 const Box: FC<BoxProps> = ({ color, width, height }) => {
+  const [newWidth, setNewWidth] = useState<number>(width);
+
+  const onClickBox = () => {
+    setNewWidth(newWidth + 100);
+  };
+
   return (
     <div
       style={{
         backgroundColor: color,
-        width: width,
-        height: height ? height : width,
+        width: newWidth,
+        height: height ? height : newWidth,
         margin: 40,
+        transition: "1s",
       }}
+      onClick={onClickBox}
     ></div>
   );
 };
