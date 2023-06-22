@@ -3,7 +3,7 @@ import { FC } from "react";
 export interface BoxProps {
   color: string;
   width: number;
-  height: number;
+  height?: number;
 }
 
 const Box: FC<BoxProps> = ({ color, width, height }) => {
@@ -12,7 +12,7 @@ const Box: FC<BoxProps> = ({ color, width, height }) => {
       style={{
         backgroundColor: color,
         width: width,
-        height: height,
+        height: height ? height : width,
         margin: 40,
       }}
     ></div>

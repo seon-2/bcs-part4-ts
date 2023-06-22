@@ -6,6 +6,8 @@ const App: FC = () => {
   return (
     <div>
       <Box color="pink" width={300} height={300} />
+      <Box color="red" width={300} height={700} />
+      <Box color="green" width={300} />
       <Circle color="blue" width={300} height={300} radius={999} />
     </div>
   );
