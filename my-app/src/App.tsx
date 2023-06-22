@@ -1,7 +1,12 @@
 import React, { FC } from "react";
+import Box from "./components/Box";
 
 const App: FC = () => {
-  return <div className="bg-pink-300">Hello, React-TS!</div>;
+  return (
+    <div>
+      <Box />
+    </div>
+  );
 };
 
 export default App;
