@@ -4,7 +4,7 @@ import Box from "./components/Box";
 const App: FC = () => {
   return (
     <div>
-      <Box />
+      <Box color="pink" />
     </div>
   );
 };
